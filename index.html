@@ -12,133 +12,182 @@
 </head>
 <body>
 
-  <!-- ── HEADER / LOGO ────────────────────────────────── -->
-  <header class="site-header">
-    <div class="logo-wrap">
+  <!-- ════════════════════════════════════════════════════
+       NAV
+       ════════════════════════════════════════════════════ -->
+  <nav class="nav">
+    <div class="nav-logo">
       <!--
-        TO ADD YOUR LOGO:
-        1. Drop your logo file into this folder (e.g. logo.png)
-        2. Change src="logo.png" to match your filename
-        The text fallback below shows automatically if the image can't be found.
+        ✏️ LOGO — drop your logo file into this folder and
+        update src="logo.png" to match your filename.
+        The pink text fallback shows until you do.
       -->
-      <img
-        src="logo.png"
-        alt="abbitalksmoney"
-        class="logo"
-        onerror="this.style.display='none'; document.getElementById('logo-fallback').style.display='block';"
-      >
-      <div id="logo-fallback" style="display:none;">
-        <span class="logo-text">abbitalksmoney</span>
-      </div>
+      <img src="logo.png" alt="abbitalksmoney"
+           onerror="this.style.display='none';document.getElementById('nl').style.display='block';">
+      <span id="nl" style="display:none;" class="logo-text">abbitalksmoney</span>
     </div>
-  </header>
-
-  <!-- ── PROFILE ──────────────────────────────────────── -->
-  <section class="profile-section">
-    <div class="profile-photo-wrap">
+    <ul class="nav-links">
       <!--
-        TO ADD YOUR PROFILE PHOTO:
-        Drop your photo into this folder (e.g. profile.jpg) and update src below.
+        ✏️ NAV LINKS — update href values to your real pages/URLs.
+        Add or remove <li> items as needed.
       -->
-      <img
-        src="profile.jpg"
-        alt="Abbi"
-        class="profile-photo"
-        onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';"
-      >
-      <div id="photo-placeholder" class="profile-photo-placeholder" style="display:none;">
-        <span class="placeholder-icon">📸</span>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="tools.html">Money Tools</a></li>
+      <li><a href="#socials" class="nav-cta">Newsletter ✉️</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════ -->
+  <section class="hero">
+
+    <!-- ✏️ INTRO PILL — short label that sits above your headline -->
+    <div class="hero-pill">✨ Personal Finance &amp; Money Tips</div>
+
+    <!-- ✏️ PROFILE PHOTO — drop profile.jpg into this folder -->
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-blob"></div>
+      <img src="profile.jpg" alt="Abbi" class="hero-photo"
+           onerror="this.style.display='none';document.getElementById('hp').style.display='flex';">
+      <div id="hp" class="hero-photo-placeholder">
+        <span class="ph-icon">📸</span>
         <span>Add Photo</span>
       </div>
-      <div class="profile-photo-ring"></div>
     </div>
 
-    <!--
-      EDIT YOUR HEADLINE, TAGLINE & BIO BELOW
-    -->
-    <h1 class="headline">Hey, I'm Abbi! 👋</h1>
-    <p class="tagline">Your no-BS guide to making, saving &amp; growing your money 💸</p>
-    <p class="bio">
-      I help women build wealth without the overwhelm. Whether you're paying off debt,
-      building your first budget, or ready to start investing — I've got you.
+    <!-- ✏️ HEADLINE — the big text. Wrap words in <em> to make them pink -->
+    <h1 class="hero-headline">
+      Hey, I'm <em>Abbi</em> —<br>let's talk <em>money</em> 💸
+    </h1>
+
+    <!-- ✏️ TAGLINE — one or two sentences about what you do -->
+    <p class="hero-tagline">
+      Your no-BS guide to budgeting, saving, and building real wealth —
+      without the overwhelm.
     </p>
 
-    <div class="badges">
-      <span class="badge badge-pink">💰 Finance Coach</span>
-      <span class="badge badge-green">✨ 10K+ Community</span>
+    <!-- ✏️ CTA BUTTONS — update href values -->
+    <div class="hero-btns">
+      <a href="#" class="btn btn-primary">📊 Free Budget Template</a>
+      <a href="products.html" class="btn btn-secondary">Browse Products →</a>
     </div>
+
   </section>
 
-  <!-- ── LINKS ─────────────────────────────────────────── -->
-  <section class="links-section">
-    <div class="container">
-      <p class="section-title">Links</p>
 
-      <div class="links-list">
-
-        <!--
-          EDIT EACH LINK BELOW:
-          - Change href="#" to your real URL
-          - Change the emoji icon if you like
-          - Edit the link text
-          - Add / remove <a> blocks as needed
-        -->
-
-        <a href="#" class="link-btn link-btn--pink">
-          <span class="link-icon">📱</span>
-          <span class="link-text">Follow on Instagram</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--dark">
-          <span class="link-icon">🎵</span>
-          <span class="link-text">TikTok @abbitalksmoney</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--dark">
-          <span class="link-icon">▶️</span>
-          <span class="link-text">YouTube Channel</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--outline">
-          <span class="link-icon">✉️</span>
-          <span class="link-text">Join My Free Newsletter</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--green">
-          <span class="link-icon">📊</span>
-          <span class="link-text">Grab My FREE Budget Template</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--outline">
-          <span class="link-icon">🎙️</span>
-          <span class="link-text">Listen to the Podcast</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="#" class="link-btn link-btn--outline">
-          <span class="link-icon">💬</span>
-          <span class="link-text">Work With Me</span>
-          <span class="link-arrow">→</span>
-        </a>
-
-        <a href="products.html" class="link-btn link-btn--gradient">
-          <span class="link-icon">🛍️</span>
-          <span class="link-text">Shop My Products</span>
-          <span class="link-arrow">→</span>
-        </a>
-
+  <!-- ════════════════════════════════════════════════════
+       ABOUT / BIO
+       ════════════════════════════════════════════════════ -->
+  <div class="section" style="padding-top:0; padding-bottom: 0;">
+    <div class="about-strip">
+      <!-- ✏️ EMOJI — change to whatever feels right -->
+      <div class="about-emoji">👋</div>
+      <div>
+        <!-- ✏️ ABOUT HEADING & BIO TEXT — write this in your own words! -->
+        <h3>Nice to meet you!</h3>
+        <p>
+          I'm Abbi — [add a line about yourself here]. Whether you're just starting your
+          money journey or ready to level up, I have free resources, tools, and products
+          to help you every step of the way.
+        </p>
       </div>
     </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       FEATURE CARDS
+       ════════════════════════════════════════════════════ -->
+  <section class="section">
+    <div class="section-header">
+      <!-- ✏️ SECTION HEADING & SUBTEXT -->
+      <h2>Here for you 💛</h2>
+      <p>Everything you need to get your money sorted — most of it completely free.</p>
+    </div>
+
+    <div class="cards-grid">
+
+      <!-- ✏️ CARD 1: Budgeting Template ─────────────────
+           Change href to your template download / sign-up page link -->
+      <a href="#" class="feature-card c-pink">
+        <div class="card-badge">Free</div>
+        <div class="card-icon">📊</div>
+        <h3 class="card-title">Free Budgeting Template</h3>
+        <p class="card-desc">
+          My most-downloaded resource — a simple, plug-and-play budget spreadsheet
+          to track every penny without the faff.
+        </p>
+        <span class="card-btn">Download free <span class="arrow">→</span></span>
+      </a>
+
+      <!-- ✏️ CARD 2: Free Products ──────────────────────
+           Change href to wherever you host your free resources -->
+      <a href="#" class="feature-card c-yellow">
+        <div class="card-badge">Free stuff!</div>
+        <div class="card-icon">🎁</div>
+        <h3 class="card-title">Free Resources</h3>
+        <p class="card-desc">
+          Guides, trackers, and templates to help you budget better, save more,
+          and feel good about money — all completely free.
+        </p>
+        <span class="card-btn">Browse freebies <span class="arrow">→</span></span>
+      </a>
+
+      <!-- ✏️ CARD 3: Money Tools page ──────────────────
+           Links to tools.html — edit that page for your affiliate links -->
+      <a href="tools.html" class="feature-card c-teal">
+        <div class="card-icon">🛠️</div>
+        <h3 class="card-title">My Favourite Money Tools</h3>
+        <p class="card-desc">
+          The exact apps, accounts, and tools I personally use to manage my money.
+          Some come with exclusive sign-up bonuses too.
+        </p>
+        <span class="card-btn">See my picks <span class="arrow">→</span></span>
+      </a>
+
+      <!-- ✏️ CARD 4: Amazon Essentials ─────────────────
+           Change href to your Amazon storefront / affiliate list -->
+      <a href="#" class="feature-card c-lavender">
+        <div class="card-icon">🛍️</div>
+        <h3 class="card-title">Shop My Essentials</h3>
+        <p class="card-desc">
+          My hand-picked Amazon finds — from books that changed how I think about
+          money to everyday budget-friendly essentials.
+        </p>
+        <span class="card-btn">Shop the list <span class="arrow">→</span></span>
+      </a>
+
+    </div>
   </section>
 
-  <!-- ── FOOTER ────────────────────────────────────────── -->
+
+  <!-- ════════════════════════════════════════════════════
+       SOCIALS + NEWSLETTER
+       ════════════════════════════════════════════════════ -->
+  <section class="socials-section" id="socials">
+    <!-- ✏️ HEADING & SUBTEXT -->
+    <h2>Find me online 👀</h2>
+    <p class="socials-sub">Come hang out — I post money tips, budgeting inspo, and the occasional hot take.</p>
+
+    <div class="socials-grid">
+      <!-- ✏️ Update each href="#" to your real profile URLs -->
+      <a href="#" class="social-btn s-insta">📱 Instagram</a>
+      <a href="#" class="social-btn s-tiktok">🎵 TikTok</a>
+      <a href="#" class="social-btn s-yt">▶️ YouTube</a>
+      <a href="#" class="social-btn s-news">✉️ Newsletter</a>
+      <a href="#" class="social-btn s-pod">🎙️ Podcast</a>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════ -->
   <footer class="site-footer">
-    <p>© 2025 abbitalksmoney &nbsp;·&nbsp; <a href="products.html">Shop</a></p>
+    <!-- ✏️ Update links / copyright year as needed -->
+    <p>© 2025 abbitalksmoney &nbsp;·&nbsp; <a href="products.html">Shop</a> &nbsp;·&nbsp; <a href="tools.html">Money Tools</a></p>
   </footer>
 
 </body>
