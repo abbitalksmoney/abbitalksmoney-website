@@ -66,19 +66,10 @@
 
       <!--
         ✏️ CONNECTING YOUR FORM:
-        1. Sign up free at formspree.io
-        2. Click New Form, give it a name, copy the URL it gives you
-        3. Replace YOUR_FORMSPREE_URL below with that URL
-           e.g. action="https://formspree.io/f/xxxxxxxx"
+        Follow the steps Claude gave you, then replace YOUR_SCRIPT_URL
+        below with your Google Apps Script web app URL.
       -->
-      <form
-        class="signup-form"
-        action="YOUR_FORMSPREE_URL"
-        method="POST"
-        id="signup-form"
-      >
-        <!-- Formspree: redirect back to this page after submit -->
-        <input type="hidden" name="_next" value="newsletter.html?success=true">
+      <form class="signup-form" id="signup-form">
 
         <div class="form-row">
           <div class="form-group">
@@ -103,21 +94,44 @@
         <p class="form-legal">No spam, ever. Unsubscribe any time.</p>
       </form>
 
-      <!-- Success message (shown after redirect with ?success=true) -->
+      <!-- Success message -->
       <div class="form-success" id="form-success" style="display:none;">
         <span class="success-icon">🎉</span>
         <h3>You're in!</h3>
-        <p>Thanks for signing up — check your inbox for a welcome email.</p>
+        <p>Thanks for signing up — speak soon!</p>
       </div>
     </div>
   </div>
 
   <script>
-    // Show success message if redirected back after form submit
-    if (window.location.search.includes('success=true')) {
-      document.getElementById('signup-form').style.display = 'none';
-      document.getElementById('form-success').style.display = 'flex';
-    }
+    // ✏️ Replace YOUR_SCRIPT_URL with your Google Apps Script web app URL
+    var SCRIPT_URL = 'YOUR_SCRIPT_URL';
+
+    var form    = document.getElementById('signup-form');
+    var success = document.getElementById('form-success');
+    var btn     = form.querySelector('.form-submit');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      var formData = new FormData(form);
+
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',   // required for Google Apps Script
+          body: formData
+        });
+        form.style.display    = 'none';
+        success.style.display = 'flex';
+      } catch (err) {
+        btn.textContent = 'Join the newsletter 💌';
+        btn.disabled    = false;
+        alert('Something went wrong — please try again!');
+      }
+    });
   </script>
 
   <!-- FOOTER -->
