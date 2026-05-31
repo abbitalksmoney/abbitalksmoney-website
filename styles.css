@@ -361,9 +361,9 @@ img { display: block; max-width: 100%; }
 .social-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .s-insta  { background: var(--pink-light);  color: var(--pink); }
 .s-tiktok { background: #1a1a1a;            color: #fff; }
+.s-fb     { background: #dce8f8;            color: #1a56a0; }
 .s-yt     { background: var(--c-orange);    color: #c02020; }
 .s-news   { background: var(--c-teal);      color: var(--teal); }
-.s-pod    { background: var(--c-lavender);  color: #6b3fa0; }
 
 /* ─── Page Hero (inner pages) ────────────────────────── */
 .page-hero {
