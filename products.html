@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — abbitalksmoney</title>
+  <meta name="description" content="Digital products to help you budget, save, and build wealth.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ── PROMO BANNER ──────────────────────────────────── -->
+  <!--
+    EDIT OR REMOVE THIS BANNER as needed.
+    Delete the entire <div class="promo-banner"> block to hide it.
+  -->
+  <div class="promo-banner">
+    🎉 <strong>Use code MONEYMOVES</strong> for 20% off your first order!
+  </div>
+
+  <!-- ── NAV ──────────────────────────────────────────── -->
+  <nav>
+    <div class="site-nav">
+      <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 5l-7 7 7 7"/>
+        </svg>
+        Back to Links
+      </a>
+      <div class="logo-wrap">
+        <img
+          src="logo.png"
+          alt="abbitalksmoney"
+          class="logo"
+          style="height:44px;"
+          onerror="this.style.display='none'; document.getElementById('logo-fallback-shop').style.display='block';"
+        >
+        <div id="logo-fallback-shop" style="display:none;">
+          <span class="logo-text" style="font-size:1.25rem;">abbitalksmoney</span>
+        </div>
+      </div>
+      <div style="width:120px;"></div><!-- spacer to keep logo centered -->
+    </div>
+  </nav>
+
+  <!-- ── PRODUCTS HEADER ───────────────────────────────── -->
+  <header class="products-header">
+    <h1>The <span>Shop</span> 🛍️</h1>
+    <p>
+      Digital tools designed to make money management easy, approachable,
+      and actually kind of fun. Instant download — start today.
+    </p>
+  </header>
+
+  <!-- ── FILTER TABS ───────────────────────────────────── -->
+  <!--
+    These are visual only — wire them up with JS or just remove them.
+  -->
+  <div class="filter-tabs">
+    <button class="filter-tab active">All Products</button>
+    <button class="filter-tab">Budgeting</button>
+    <button class="filter-tab">Saving</button>
+    <button class="filter-tab">Investing</button>
+    <button class="filter-tab">Freebies</button>
+  </div>
+
+  <!-- ── PRODUCTS GRID ─────────────────────────────────── -->
+  <!--
+    TO ADD / EDIT PRODUCTS:
+    Copy one <article class="product-card"> block and paste it below the last one.
+    Update the emoji, name, description, includes list, price, and button link.
+
+    bg-pink / bg-green / bg-blue / bg-yellow / bg-purple  →  card image background colour
+    badge-bestseller / badge-new / badge-freebie           →  badge style
+    btn-buy--pink / btn-buy--green / btn-buy--dark         →  button colour
+  -->
+  <div class="products-grid">
+
+    <!-- PRODUCT 1 -->
+    <article class="product-card">
+      <div class="product-card-img bg-pink">
+        📊
+        <span class="product-badge badge-bestseller">Bestseller</span>
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Budgeting</p>
+        <h2 class="product-name">The Ultimate Budget Spreadsheet</h2>
+        <p class="product-desc">
+          A plug-and-play Google Sheets template that tracks every dollar,
+          auto-calculates your savings rate, and shows where your money is actually going.
+        </p>
+        <ul class="product-includes">
+          <li>Monthly &amp; yearly budget tracker</li>
+          <li>Bill payment calendar</li>
+          <li>Spending category breakdowns</li>
+          <li>One-click charts &amp; graphs</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-amount">$17</span>
+          <span class="price-was">was $27</span>
+        </div>
+        <!-- Change href to your checkout / Gumroad / Payhip link -->
+        <a href="#" class="btn-buy btn-buy--pink">Get it →</a>
+      </div>
+    </article>
+
+    <!-- PRODUCT 2 -->
+    <article class="product-card">
+      <div class="product-card-img bg-green">
+        💳
+        <span class="product-badge badge-new">New</span>
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Debt Payoff</p>
+        <h2 class="product-name">Debt Destroyer Toolkit</h2>
+        <p class="product-desc">
+          Everything you need to crush your debt faster. Includes the avalanche
+          vs. snowball calculator, a payoff timeline, and a motivation tracker.
+        </p>
+        <ul class="product-includes">
+          <li>Debt payoff calculator</li>
+          <li>Avalanche &amp; snowball comparison</li>
+          <li>Month-by-month payoff tracker</li>
+          <li>Milestone celebration prompts</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-amount">$22</span>
+        </div>
+        <a href="#" class="btn-buy btn-buy--green">Get it →</a>
+      </div>
+    </article>
+
+    <!-- PRODUCT 3 -->
+    <article class="product-card">
+      <div class="product-card-img bg-yellow">
+        💰
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Saving</p>
+        <h2 class="product-name">Emergency Fund Starter Guide</h2>
+        <p class="product-desc">
+          A step-by-step PDF guide to building a 3–6 month emergency fund,
+          even if you're starting from zero — no fluff, just an actionable plan.
+        </p>
+        <ul class="product-includes">
+          <li>30-day savings challenge</li>
+          <li>High-yield savings account guide</li>
+          <li>Goal-setting worksheets</li>
+          <li>Weekly check-in prompts</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-amount">$12</span>
+        </div>
+        <a href="#" class="btn-buy btn-buy--pink">Get it →</a>
+      </div>
+    </article>
+
+    <!-- PRODUCT 4 -->
+    <article class="product-card">
+      <div class="product-card-img bg-purple">
+        📈
+        <span class="product-badge badge-bestseller">Bestseller</span>
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Investing</p>
+        <h2 class="product-name">Investing 101 Mini-Course</h2>
+        <p class="product-desc">
+          6 short video lessons + workbook covering everything a beginner needs:
+          index funds, Roth IRAs, compound interest, and how to actually start.
+        </p>
+        <ul class="product-includes">
+          <li>6 video lessons (under 10 min each)</li>
+          <li>Fillable workbook (PDF)</li>
+          <li>Glossary of investing terms</li>
+          <li>Lifetime access</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-amount">$47</span>
+          <span class="price-was">was $67</span>
+        </div>
+        <a href="#" class="btn-buy btn-buy--dark">Enroll →</a>
+      </div>
+    </article>
+
+    <!-- PRODUCT 5 -->
+    <article class="product-card">
+      <div class="product-card-img bg-blue">
+        🎯
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Goal Setting</p>
+        <h2 class="product-name">Money Goals Planner</h2>
+        <p class="product-desc">
+          A 12-month digital planner built around your money goals. Tracks net worth,
+          income, side hustle revenue, and major milestones all in one place.
+        </p>
+        <ul class="product-includes">
+          <li>12-month goal tracker</li>
+          <li>Net worth calculator</li>
+          <li>Side hustle income log</li>
+          <li>Quarterly review templates</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-amount">$19</span>
+        </div>
+        <a href="#" class="btn-buy btn-buy--pink">Get it →</a>
+      </div>
+    </article>
+
+    <!-- PRODUCT 6 — FREEBIE -->
+    <article class="product-card">
+      <div class="product-card-img bg-green">
+        🎁
+        <span class="product-badge badge-freebie">Free</span>
+      </div>
+      <div class="product-card-body">
+        <p class="product-category">Freebie</p>
+        <h2 class="product-name">FREE Budget Template</h2>
+        <p class="product-desc">
+          My most popular freebie — a simple one-page budget template to get you
+          started in under 10 minutes. No email required.
+        </p>
+        <ul class="product-includes">
+          <li>One-page Google Sheet</li>
+          <li>Income vs. expenses overview</li>
+          <li>Pre-filled expense categories</li>
+        </ul>
+      </div>
+      <div class="product-card-footer">
+        <div class="product-price">
+          <span class="price-free">Free!</span>
+        </div>
+        <a href="#" class="btn-buy btn-buy--green">Download →</a>
+      </div>
+    </article>
+
+  </div><!-- /products-grid -->
+
+  <!-- ── FOOTER ────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>© 2025 abbitalksmoney &nbsp;·&nbsp; <a href="index.html">Home</a></p>
+  </footer>
+
+</body>
+</html>
