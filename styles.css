@@ -561,6 +561,88 @@ img { display: block; max-width: 100%; }
 .btn-buy--green   { background: var(--teal); color: white; }
 .btn-buy--dark    { background: var(--dark); color: white; }
 
+/* ─── Newsletter Page ────────────────────────────────── */
+.newsletter-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 56px 24px 32px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.newsletter-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin: 16px 0 14px;
+}
+.newsletter-hero h1 span { font-style: normal; }
+.newsletter-hero p {
+  color: var(--mid);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 460px;
+}
+
+.perks-row {
+  display: flex;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 260px;
+  box-shadow: var(--shadow);
+}
+.perk-icon { font-size: 1.75rem; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+.perk strong { display: block; font-size: 0.9rem; font-weight: 800; margin-bottom: 4px; }
+.perk p { font-size: 0.82rem; color: var(--mid); line-height: 1.55; margin: 0; }
+
+.form-section {
+  padding: 0 24px 64px;
+  max-width: 580px;
+  margin: 0 auto;
+}
+.form-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.form-card h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 6px; }
+.form-sub { color: var(--mid); font-size: 0.9rem; margin-bottom: 24px; }
+
+.form-placeholder {
+  background: var(--bg);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-sm);
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.form-placeholder-icon { font-size: 2.5rem; }
+.form-placeholder p { font-size: 0.85rem; color: var(--mid); line-height: 1.6; max-width: 320px; margin: 0; }
+.form-placeholder strong { color: var(--dark); }
+
 /* ─── Footer ─────────────────────────────────────────── */
 .site-footer {
   padding: 28px 24px;
