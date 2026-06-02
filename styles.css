@@ -711,6 +711,104 @@ img { display: block; max-width: 100%; }
 .form-placeholder p { font-size: 0.85rem; color: var(--mid); line-height: 1.6; max-width: 320px; margin: 0; }
 .form-placeholder strong { color: var(--dark); }
 
+/* ─── Single Product Feature Layout ─────────────────── */
+.product-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 900px;
+  margin: 16px auto 64px;
+  padding: 0 24px;
+  align-items: stretch;
+}
+.product-feature-visual {
+  border-radius: var(--radius) 0 0 var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  min-height: 320px;
+}
+.product-feature-details {
+  background: var(--white);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 36px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  border-left: none;
+}
+.product-feature-name {
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-top: 2px;
+}
+.product-feature-sub {
+  font-size: 0.9rem;
+  color: var(--mid);
+  margin-top: -6px;
+}
+.product-feature-price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--dark);
+  margin: 2px 0;
+}
+.product-feature-desc {
+  font-size: 0.88rem;
+  color: var(--mid);
+  line-height: 1.7;
+}
+.product-includes--feature {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 4px 0;
+}
+.product-includes--feature li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.875rem;
+  list-style: none;
+  color: var(--dark);
+}
+.product-includes--feature li::before {
+  content: "✓";
+  color: var(--teal);
+  font-weight: 800;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.product-buy-btn {
+  margin-top: 6px;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 14px 24px;
+}
+
+@media (max-width: 640px) {
+  .product-feature {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+  }
+  .product-feature-visual {
+    border-radius: var(--radius) var(--radius) 0 0;
+    min-height: 180px;
+    font-size: 4rem;
+  }
+  .product-feature-details {
+    border-radius: 0 0 var(--radius) var(--radius);
+    border-left: 1px solid var(--border);
+    border-top: none;
+    padding: 24px 20px;
+  }
+}
+
 /* ─── Footer ─────────────────────────────────────────── */
 .site-footer {
   padding: 28px 24px;
